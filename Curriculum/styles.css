@@ -1,0 +1,47 @@
+.grid-container{
+    display: grid;
+    background-color: white;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.item-lateral{
+    background-color: lightpink;
+    display: grid;
+    grid-template-rows: 28% 4% 75%;
+    border: medium solid;
+}
+
+.nombre, .datos-personales{
+    font-size: 112%;
+}
+
+.imagen{
+    border-bottom: medium solid;
+    text-align: center;
+    background-color: darkseagreen;
+}
+
+.item-secundario{
+    display: grid;
+    grid-template-rows: 25% 75%;
+    background-color: white;
+    gap: 10px;
+}
+.sobre-mi{
+    background-color: darkgray;
+    border: medium solid;
+}
+
+.experiencia-laboral{
+    display: grid;
+    background-color: darkgray;
+    grid-template-columns: 50% 50%;
+    border: medium solid
+}
+
+.habilidades-tecnicas{
+    border: darkseagreen;
+}
