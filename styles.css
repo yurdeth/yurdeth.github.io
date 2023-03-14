@@ -1,0 +1,86 @@
+body {
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: [col1] 1fr [col2] 1fr [col3] 1fr;
+    grid-template-rows: auto;
+
+    /*Trmplade*/
+    grid-template-areas:
+    "header header header"
+    "navbar navbar navbar"
+    "ofertas ofertas ofertas"
+    "productos productos productos"
+    "footer footer footer";
+    row-gap: 5px;
+    width: 90%;
+    height: 100vh;
+}
+
+/*Por si hubiera varios header se puede hacer lo siguiente
+.container .header{
+
+}*/
+
+.header {
+    grid-area: header;
+    background-color: bisque;
+    grid-row:  1 / 2;
+    text-align: center;
+}
+
+.navbar{
+    grid-area: navbar;
+    background-color: #353581;
+    grid-row: 2/ 2;
+    /*Primera forma para las opciones del navbar*/
+    text-align: center;
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
+
+span{
+    margin-top: 5px;
+    color: white;
+    /* segunda forma para las opciones del navbar
+    margin-left: 20px;
+    margin-right: 20px;*/
+}
+
+.ofertas {
+    grid-area: ofertas;
+    background-color: red;
+    grid-row: 3 / 3;
+}
+
+.productos {
+    grid-area: productos;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 5px;
+}
+
+.prod {
+    padding: 5%;
+    background-color: bisque;
+    grid-row: auto;
+    border: medium solid grey;
+    text-align: center;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: bisque;
+    grid-row: 7 / 8;
+    text-align: center;
+}
+
+.border{
+    border-radius: 20px;
+}
